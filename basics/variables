@@ -1,0 +1,23 @@
+Primitive Types:
+- byte, short, int, long, float, double, char, boolean
+
+Integer:
+- byte
+- short
+- int
+- long
+
+Floating point
+
+- float
+- double
+
+- char
+- boolean
+
+
+int: 32 bit signed twos compliment
+float: 32 bit floating point
+long: 64 bit twos compliment (eg: number of people in a country)
+
+double: 64 bit floating point
