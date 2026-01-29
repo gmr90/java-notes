@@ -1,0 +1,49 @@
+Popular Collection Types"
+
+1. List - Order, duplicates allowed
+2. Set  - Set of things, not in order, no duplicates
+3. Map  - Key, value pair
+
+Collection Framework
+- Not library
+
+Benefits
+- It's done for you!
+- High-performance implementations
+- Improves code resuability and maintainability
+- Offer good "preset" data structure
+- Common vocabulary for collections
+
+Data Structures:
+
+What collections Framework gives us
+- core interfaces (Eg: List)
+- Specific implementations (Eg: ArrayList)
+- Abstract implementations(Eg: AbstractList)
+- Concurrent implementations(Eg: ConcurrentHashMap)
+- Algorithms (Eg: sort, binarySearch)
+- Utilities (Eg: Arrays.compare)
+
+
+Collection Interfaces
+- Collection (everything in collection is extended from Collection interface except Map)
+- Map
+
+
+Types of Collections
+- Index based retrieval collections
+- Immutable collections
+- Order based retrieval collections
+-
+Collection interface
+What methods should it have ?
+- Adding by index
+- Fetching next element
+- Finding duplicate elements
+- Removing an element
+- Sorting
+
+Two ways
+- Optional methods
+- Iterator pattern
+
