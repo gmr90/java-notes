@@ -1,0 +1,103 @@
+Reference equality
+Person p1 = new Person();
+Person p2 = new Person();
+// ..
+boolean isEqual = p1 ==p2;
+
+Check all member variables ?
+
+class Person {
+    private String name;
+    private long id;
+    private Date lastFetchedFromDB;
+}
+
+Object class
+Has an equals method
+
+Default equal method:
+    - Allow implementation to override
+    - Standard API to compare:p1.equals(p2);
+    - Defaults to comparing reference
+
+
+Why am I talking about equal here
+
+The Collection contract :
+    - Set - no duplicate elements
+    - Contains method
+    - So much more
+
+Collection<Person> myElements = // ..
+boolean isP1InCollection = myElements.contains(p1);
+
+contains(Object o):
+    returns true if and only if this collection contains at least one element e such that
+    (o==null ? e==null : o.equals(e))
+
+
+The equals contract
+    - Reflexivity
+    - Symmetry
+    - Transitivity
+    - Consistency
+    - Non-nullity
+
+Reflexivity:  an object should be equal to itself
+
+    Person p1 = new Person(1,2)
+    System.out.println(p1.equals(p1)) // true
+
+Symmetry: if x is equal to y, then y should also be equal  to x
+
+    Person p1 = new Person(1,2)
+    Person p2 = new Person(1,2)
+
+    System.out.println(p1.equals(p2)) // true
+    System.out.println(p2.equals(p1)) // true
+
+
+Transitivity; if x is equal to y and y is equal to z, then x should also be equal to z
+
+    Person p1 = new Person(1,2)
+    Person p2 = new Person(1,2)
+    Person p3 = new Person(1,2)
+
+    System.out.println(p1.equals(p2)) // true
+    System.out.println(p2.equals(p1)) // true
+    System.out.println(p3.equals(p1)) // true
+
+Consistency:
+    should return the same result unless the state of the object has been modified
+        Person p1 = new Person(1,2)
+        Person p2 = new Person(1,2)
+
+        System.out.println(p1.equals(p2)) // true
+        p1.x =3 ;
+        System.out.println(p1.equals(p2)) // false
+
+
+Non-nullity: an object should never be considered equal to null
+
+ Point p1 = new Point(1,2)
+ System.out.println(p1.equals(null)); // false
+
+
+ An equals implementations
+
+ public class Peron {
+    private String name;
+    private int age;
+    // getters and setters
+
+    public boolean equal(Object obj){
+        if(this == obj){
+            return true;
+        }
+        if(obj== null || getClass()! = obj.getClass()){
+            return false;
+        }
+        Person person = (Person) obj;
+        return age == person.age && Objects.equals(name, person.name);
+    }
+ }

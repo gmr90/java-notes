@@ -47,3 +47,10 @@ Two ways
 - Optional methods
 - Iterator pattern
 
+Collection interface
+- Constructors for creating a collection
+- Adding objects (without specifying where)
+- Removing objects (without specifying where)
+- Check if object exists
+- Convert to Array
+- Clearing the whole collection

@@ -1,0 +1,25 @@
+Hashing:
+    the process of mapping data of arbitrary size to fixed-size or keys, known as hash codes or has values,
+    that represent the original data in a way that can be easily and quickly looked up
+
+
+  A real world analogy:
+    student file (last name start with something will go it to particular row)
+
+  Hashing use cases
+    - Password storage
+    - File integrity checking
+    - Digital signatures
+    - Caching
+
+   Collections
+
+   Easy way to look up!
+
+   Finding an object in a collection
+
+   Finding the hash!
+
+   Equality and hash code
+   When tow objects are equal according to the equals() method, they should also have the same hash code
+
